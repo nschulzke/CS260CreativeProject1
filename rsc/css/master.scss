@@ -1,0 +1,135 @@
+@import "reset";
+@import "vars";
+@import "cols";
+
+$header-height: 3rem;
+$footer-height: 2rem;
+
+body {
+  font-size: 20px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h1, h2, h3, h4 {
+  margin-bottom: 0.2em;
+}
+
+a, a:hover, a:visited, a:active {
+  color: $dark-accent;
+  text-decoration: underline;
+}
+
+.lead-text {
+  font-size: 1.5rem;
+}
+
+.container {
+  display: grid;
+  grid-template:
+    "header" $header-height
+    "main"   1fr
+    "footer" $footer-height;
+  height: 100%;
+}
+
+.container-sidebar {
+  display: grid;
+  grid-template-rows:
+    "header  header" $header-height
+    "sidebar main"   1fr
+    "footer  footer" $footer-height;
+  grid-template-columns: 1fr 3fr;
+  height: 100%;
+}
+
+.header {
+  $header-padding: 5rem;
+  display: flex;
+  line-height: $header-height;
+  grid-area: header;
+  background-color: $dark-main;
+  color: $light-main;
+  .logo {
+    display: inline-block;
+    height: $header-height;
+    padding: 0.2rem;
+    margin: 0 ( ( $header-padding - $header-height ) / 2);
+    img {
+      height: 100%;
+    }
+  }
+  nav {
+    display: inline-block;
+    flex: 1;
+    .right {
+      display: inline-block;
+      position: absolute;
+      right: $header-padding;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+      display: inline-block;
+      height: $header-height;
+      font-size: 1.3rem;
+      padding: 0 0.5rem;
+      &.active {
+        background-color: $dark-accent;
+      }
+    }
+  }
+}
+
+.main {
+  padding-right: 10rem;
+  padding-bottom: 4rem;
+  grid-area: main;
+  .banner {
+    width: 100%;
+    height: 30rem;
+    background-image: url("/rsc/img/conlang_flag.png");
+    background-size: cover;
+    background-position: center;
+  }
+  .content {
+    margin: 0 auto;
+    margin-top: 2rem;
+    max-width: 40rem;
+  }
+}
+
+.container .main {
+  padding-left: 10rem;
+}
+
+.sidebar {
+  padding-left: 10rem;
+  grid-area: sidebar;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: $dark-main;
+  color: $light-main;
+  line-height: $footer-height;
+  text-align: center;
+  a {
+      color: inherit;
+      text-decoration: none;
+  }
+}

@@ -1,0 +1,18 @@
+@import "vars";
+
+$col-padding: 1rem;
+
+.cols > .mobile-padded {
+  padding: $col-padding 0;
+}
+
+@media screen and (min-width: $desktop-width) {
+  .cols {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
+    & > * {
+      padding: 0 $col-padding;
+    }
+  }
+}
