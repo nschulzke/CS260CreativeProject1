@@ -14,11 +14,11 @@ $footer-height: 1.5rem;
 
 .container-sidebar {
   display: grid;
-  grid-template-rows:
+  grid-template:
     "header  header" $header-height
     "sidebar main"   1fr
-    "footer  footer" $footer-height;
-  grid-template-columns: 1fr 3fr;
+    "footer  footer" 2rem
+    / 1fr 3fr;
   height: 100%;
 }
 
@@ -61,6 +61,7 @@ $footer-height: 1.5rem;
 }
 
 .main {
+  overflow-y: auto;
   padding-right: 10rem;
   padding-bottom: 4rem;
   grid-area: main;
@@ -86,8 +87,10 @@ $footer-height: 1.5rem;
 }
 
 .sidebar {
-  padding-left: 10rem;
+  padding: 1rem;
+  padding-left: 0;
   grid-area: sidebar;
+  background-color: $dark-accent;
 }
 
 .footer {
