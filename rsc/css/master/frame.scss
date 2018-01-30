@@ -1,7 +1,7 @@
 @import "vars";
 
-$header-height: 3rem;
-$footer-height: 2rem;
+$header-height: 2.5rem;
+$footer-height: 1.5rem;
 
 .container {
   display: grid;
@@ -93,7 +93,7 @@ $footer-height: 2rem;
   color: $light-main;
   line-height: $footer-height;
   text-align: center;
-  a {
+  a, a:hover, a:visited, a:active {
       color: inherit;
       text-decoration: none;
   }
