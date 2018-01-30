@@ -43,3 +43,26 @@ a, a:hover, a:visited, a:active {
 .lead-text {
   font-size: 1.3rem;
 }
+
+.form-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.grid-form {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: fit-content(50%) 1fr;
+  grid-gap: 0.5rem;
+  line-height: 1.3rem;
+  text-align: right;
+}
+
+label {
+  white-space: nowrap;
+}
+
+input {
+  font-size: 1rem;
+  display: block;
+}
