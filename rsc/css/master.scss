@@ -40,6 +40,10 @@ a, a:hover, a:visited, a:active {
   text-decoration: underline;
 }
 
+p:not(:first-of-type) {
+  margin-top: 0.5em;
+}
+
 .inline {
   display: inline-block;
 }
@@ -67,6 +71,7 @@ a, a:hover, a:visited, a:active {
 .index {
   display: flex;
   flex-direction: column;
+  height: 100%;
   .index-header {
     margin-top: 0.5rem;
     position: relative;
