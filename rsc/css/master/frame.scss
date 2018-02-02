@@ -62,8 +62,6 @@ $footer-height: 1.5rem;
 
 .main {
   overflow-y: auto;
-  padding-right: 10rem;
-  padding-bottom: 4rem;
   grid-area: main;
   .banner {
     width: 100%;
@@ -73,17 +71,17 @@ $footer-height: 1.5rem;
     background-position: center;
   }
   .content {
-    margin: 0 auto;
-    margin-top: 2rem;
+    margin: 1rem 0;
     max-width: 40rem;
+    padding: 0 1rem;
   }
   .narrow {
     max-width: 20rem;
   }
-}
-
-.container .main {
-  padding-left: 10rem;
+  & > section {
+    margin: 0 auto;
+    max-width: 50rem;
+  }
 }
 
 .sidebar {

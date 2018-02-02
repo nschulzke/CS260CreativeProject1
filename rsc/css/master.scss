@@ -73,37 +73,51 @@ p:not(:first-of-type) {
   flex-direction: column;
   height: 100%;
   .index-header {
-    margin-top: 0.5rem;
     position: relative;
-    border-bottom: 1px solid $dark-main;
+    width: 100%;
+    max-width: initial;
+    background-color: $dark-accent;
+    color: $light-main;
+    padding: 0.5rem 4rem;
+    .search {
+      right: 4rem;
+    }
   }
 
   .index-list {
     padding: 0 1rem;
     flex: 1;
     overflow-y: auto;
+    display: grid;
+    grid-auto-rows: 1fr;
     .index-item {
+      display: grid;
+      grid-template-areas: "left middle right";
+      grid-template-columns: 10rem 1fr 10rem;
       margin: 1rem;
       height: 10rem;
       position: relative;
       overflow: hidden;
       border-bottom: 1px solid $dark-main;
+      .index-image {
+        grid-area: left;
+        padding: 1rem;
+        vertical-align: middle;
+        img {
+          max-width: 8rem;
+          max-height: 8rem;
+        }
+      }
+      .index-details {
+        grid-area: middle;
+      }
+      .index-features {
+        grid-area: right;
+      }
       .index-author {
         position: absolute;
         bottom: 1rem;
         right: 1rem;
-      }
-      .index-name {
-        display: inline-block;
-      }
-      .index-description {
-        margin-right: 12rem;
-      }
-      .index-features {
-        display: inline-block;
-        position: absolute;
-        right: 1rem;
-        max-width: 10rem;
       }
     }
   }
